@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="icon" href="img/logo-alura.ico">
+</head>
+<body>
+    <video id="bg-video" autoplay loop muted>
+        <source src="background/star_-_19289 (Original).mp4" type="video/mp4">
+        Tu navegador no admite la reproducción de videos.
+      </video>      
+    <header>
+        <div class="logo">
+            <a href="/">
+            <img class="logo-alura" src="img/logo-alura.png" alt="logo de alura">
+            </a>    
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="left">
+                <textarea class="ingreso-texto" name="textarea" id="ingresoTexto" oninput="sanitizeTextarea()" cols="1" rows="14" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="terminos">
+                    <img class="exclamation" src="img/exclamation.png" alt="">
+                    <span class="condiciones" >Evite usar letras mayúsculas y acentos</span>
+                    <div class="botones">
+                        <button class="btn-encript" id="btnEncript">Encriptar</button>
+                        <button class="btn-desencript" id="btnDesencript">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right ajustar" id="right">
+                <img class="diamante" id="diamante" src="img/diamante.png" alt="diamante">
+                <textarea class="ningun-msj" id="ningunMsj" readonly placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p class="text-eod" id="textEod" >Ingrese el texto que desees encriptar o desencriptar.</p>
+                <button class="btn-copiar ocultar"  id="btnCopiar" onclick="copyToClipboard()"><i class="fas fa-copy"></i> Copiar</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
